@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>Nome: <input name="nome" type="text" /></div>
+        <div>Senha: <input name="senha" type="password" /></div>
+        <div>Email: <input name="email" type="email" /></div>
+        <div><input name="escondido" type="hidden" value="form-rh-2020"/></div>
+        <div>Anos de experiência: <input name="xp" type="number" /></div>
+        <div>Programador: <input name="programador" type="checkbox" /></div>
+        <div>Currículo: <input name="curriculum" type="file" /></div>
+        <div>Linkedin: <input name="linkedin" type="url" /></div>
+        <div>
+           Estado Civil:
+           <input name="estadocivil" type="radio" value="solteiro"> Solteiro
+           <input name="estadocivil" type="radio" value="casado"> Casado
+        </div>
+        <div>
+            <input name="reset" type="reset" value="limpar"/>
+            <input name="submit" type="submit" value="submeter"/>
+        </div>
+        <select name="curso">
+            <option>Selecione...</option>
+            <option value="WFR">Web Frontend & React</option>
+            <option value="WFS">Web Fullstack</option>
+            <option valeu="WRD">Web & React (Digital)</option>
+        </select>
+    </form>    
+    <textarea name="texto" cols="50" rows="5">
+        Isso é um texto
+        Com quebras de linha
+        Que são respeitadas pelo textarea
+    </textarea>
+</body>
+</html>
