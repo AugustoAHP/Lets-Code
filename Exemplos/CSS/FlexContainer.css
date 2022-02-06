@@ -1,0 +1,15 @@
+.flex-container {
+    display: flex;
+    background-color: dodgerblue;
+}
+
+.flex-container > div {
+    background-color: #fd0d0d;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.flex-container > p {
+    font-size: 30pt;
+}
