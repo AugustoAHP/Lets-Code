@@ -92,7 +92,8 @@ body {
 }
 
 .box2 p {
-
+    max-width: 600px;
+    margin-bottom: 20px;
 }
 
 .box3 {

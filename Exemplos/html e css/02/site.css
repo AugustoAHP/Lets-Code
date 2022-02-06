@@ -51,7 +51,7 @@ header nav a:hover {
     color: black;
 }
 
-aside {
+aside: {
     background-color: #bbbbbb;
     grid-row: 2 / 4;
     padding: 10px 20px;
