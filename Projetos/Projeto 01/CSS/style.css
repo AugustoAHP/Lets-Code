@@ -36,16 +36,39 @@ header nav h1 {
     padding-left: 15px;
 }
 
+.login {
+    display: flex;
+    padding: 3px 8px 3px 8px;
+    border: 1px;
+    border-style: solid;
+    align-items: center;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+
+.login:hover {
+
+    background-color: #d6978296;
+}
+
 .menu-top {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     margin: 0;
+    align-items: center;
+    padding-right: 15px;
 }
 
 .menu-top p {
     padding: 13px;
     margin: 0;
+}
+
+.menu-top a {
+    text-decoration: none;
+    color: black;
 }
 
 main {
@@ -62,9 +85,12 @@ main p {
     font-family: monospace;
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 5px;
 }
 
+.lembrete {
+    padding: 20px;
+}
 
 .center {
     display: flex;
@@ -82,7 +108,7 @@ main p {
     box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
     justify-items: center;
     justify-content: space-around;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     
 }
 
@@ -90,8 +116,10 @@ main p {
     display: grid;
     background-color: #FFB25C;
     padding: 15px;
+    min-width: 250px;
     max-width: 300px;
-    max-height: 300px;
+    min-height: 250px;
+    max-height: 350px;
     min-width: 300px;
     border-radius: 30px;
     box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
@@ -110,4 +138,5 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    padding: 10px 0px;
 }
