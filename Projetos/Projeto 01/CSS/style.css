@@ -132,8 +132,8 @@ main p {
 }
 
 footer {
-    background-color: #E8945F;
-    color: white;
+    background-image: linear-gradient(#fff, #E8945F) ;
+    color: black;
     left: 0;
     bottom: 0;
     width: 100%;
