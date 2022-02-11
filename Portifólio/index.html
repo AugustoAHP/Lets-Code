@@ -8,8 +8,21 @@
     <title>Portifólio</title>
 </head>
 <body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <img src="img/menu.jfif">
+    </label>
+    <nav>
+        <ul>
+            <li><a href="#profile">Perfil</a></li>
+            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="#front">Front End</a></li>
+            <li><a href="#back">Back End</a></li>
+        </ul>
+    </nav>
+    
 <div class="center">
-    <div class="box">
+    <div class="box" id="profile">
         <img class="foto-perfil" src="img/Masc.png">
         <h1>Augusto Henrique Pereira</h1>
         <h2>Serrana, São Paulo</h2>
@@ -21,46 +34,57 @@
         </ul>
     </div>
 
-    <div class="box2">
+    <div class="box2"  id="about">
         <h1>Sobre mim</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem debitis asperiores eveniet soluta enim qui! Molestiae id natus officiis mollitia impedit fugiat perspiciatis aliquam quia! Quas, non. Quidem, vero sunt?</p>
     </div>
 
     <div class="box3">
-        <h1>Meus Projetos</h1>
+            <h1>Meus Projetos</h1>
         <ul>
+        <h2 id="front">Front End</h2>
+        
             <li><a href="../Projetos/Projeto 01/Projeto01.html" target="_blank"><img class="project-img" src="img/project1.png" alt="Projeto 1"></a>
                 <div class="project">
-                    <h2>Organizador de Lembretes</h2>
+                    <h3>Organizador de Lembretes</h3>
                     <p>Projeto Front-End de um organizador de lembretes online.<br> Criar e armazenar lembretes, com sistema de login.
                     <br><br>Ainda em construção...</p>
                 </div>
             </li> 
             <li><img class="project-img" src="img/projeto1.png" alt="Projeto 2">
                 <div class="project">
-                    <h2>Projeto 02</h2>
+                    <h3>Projeto 02</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem debitis asperiores eveniet soluta enim qui! Molestiae id natus officiis mollitia impedit fugiat perspiciatis aliquam quia! Quas, non. Quidem, vero sunt?</p>
+                </div>
+            </li>
+        </ul>
+
+        <h2 id="back">Back End</h2>
+        <ul>
+            <li><a><img class="project-img" src="img/projeto1.png" alt="Projeto 1"></a>
+                <div class="project">
+                    <h3>Projeto 01</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem debitis asperiores eveniet soluta enim qui! Molestiae id natus officiis mollitia impedit fugiat perspiciatis aliquam quia! Quas, non. Quidem, vero sunt?</p>
+                </div>
+            </li> 
+            <li><img class="project-img" src="img/projeto1.png" alt="Projeto 2">
+                <div class="project">
+                    <h3>Projeto 02</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem debitis asperiores eveniet soluta enim qui! Molestiae id natus officiis mollitia impedit fugiat perspiciatis aliquam quia! Quas, non. Quidem, vero sunt?</p>
                 </div>
             </li>
         </ul>
         
     </div>
-
+</div>
     
 
-</div>
+
+
 <footer>
             <p>© 2022</p>
             <p>Augusto Henrique</p>
         </footer>    
-
-<!-- <aside>
-    <h1>Menu</h1>
-    <ul>
-        <li><a>Sobre mim</a></li>
-        <li><a>Meus projetos</a></li>
-    </ul>
-</aside> -->
 
 </body>
 </html>

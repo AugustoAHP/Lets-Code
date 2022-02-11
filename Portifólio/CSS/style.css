@@ -14,11 +14,9 @@ li {
 body {
     background: url("../img/background.jfif");
     background-size: cover;
-    display: grid;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-    align-items: center;
-    justify-items: center;
+
 
 }
 
@@ -35,7 +33,7 @@ body {
     margin-bottom: 50px;
     padding: 15px;
     border-radius: 35px;
-    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.7);
     text-align: center;
 }
 
@@ -90,12 +88,12 @@ body {
     margin-bottom: 50px;
     max-width: 450px;
     border-radius: 35px;
-    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.7);
     text-align: center;
 }
 
 .box2 h1 {
-    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .box2 p {
@@ -111,14 +109,20 @@ body {
     margin-bottom: 50px;
     max-width: 800px;
     border-radius: 35px;
-    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.7);
     justify-items: center;
     
 }
 
 .box3 h1 {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
 }
+
 
 .project-img {
     width: 400px;
@@ -135,11 +139,15 @@ body {
 .box3 li {
     display: grid;
     grid-template-columns: auto 1fr;
-    margin-bottom: 20px;
 
 }
 
 .box3 h2 {
+    padding: 35px 0px 20px 0px;
+    text-align: center;
+}
+
+.box3 h3 {
     margin-top: 15px;
     margin-left: 15px;
     text-align: justify;
@@ -147,8 +155,12 @@ body {
 
 .box3 p {
    text-align: justify;
-   padding: 15px;
-   
+   padding: 15px;    
+}
+
+.box3 h2 {
+    border-top: 1px black groove;
+    width: 100%;
     
 }
 
@@ -172,3 +184,54 @@ footer p {
 }
 
 
+
+nav {
+    background-color: rgba(41, 41, 41, 0.856);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: -250px;
+    transition: all 0.5s;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 20px 15px;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: bisque;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    top: 70px;
+    position: absolute;
+    width: 100%;
+}
+
+label {
+    padding: 15px;
+    position: fixed;
+    z-index: 1;
+}
+
+label img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    transform: translateX(250px);
+}
