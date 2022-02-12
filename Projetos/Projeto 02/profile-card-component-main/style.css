@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+    background-color: hsl(185, 75%, 39%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    padding: 1rem; 
+}
+
+.bg-top {
+    position: fixed;
+    top: -80%;
+    left: -25%;
+    z-index: -1;
+}
+
+.bg-bot {
+    position: fixed;
+    bottom: -80%;
+    right: -25%;
+    z-index: -1;
+}
+
+main {
+    background-color: #fff;
+    width: 420px;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+main img {
+    width: 100%;
+}
+
+.img-back {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.img-profile {
+    border-radius: 50%;
+    width: 100px;
+    position: absolute;
+    top: -100px;
+    border: 6px white solid;
+    background-color: white;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 3rem 0rem 1rem 0rem;
+
+}
+
+.name-old {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.name-old h1 {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.name-old span {
+    font-size: 20px;
+    color: hsl(0, 0%, 59%);
+}
+
+.profile p {
+    text-align: center;
+    color: hsl(0, 0%, 59%);
+    padding-bottom: 2rem;
+}
+
+.statics {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2rem 1rem 1rem 1rem;
+    border-top: 1px hsla(0, 0%, 59%, 0.6) solid;
+}
+
+.follows {
+    text-align: center;
+}
+
+.follows p{
+    font-weight: 700;
+}
+
+.follows span {
+    color: hsl(0, 0%, 59%);
+}
+
+.likes {
+    text-align: center;
+}
+
+.likes p{
+    font-weight: 700;
+}
+
+.likes span {
+    color: hsl(0, 0%, 59%);
+}
+
+.photos {
+    text-align: center;
+}
+
+.photos p{
+    font-weight: 700;
+}
+
+.photos span {
+    color: hsl(0, 0%, 59%);
+}
+
+
