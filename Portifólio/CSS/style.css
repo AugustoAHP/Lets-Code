@@ -55,9 +55,6 @@ body {
     margin-bottom: 25px;
 }
 
-
-
-
 .foto-perfil {
     border-radius: 50%;
     margin: 10px auto 30px auto;
@@ -154,13 +151,13 @@ body {
 
 .box3 p {
    text-align: justify;
-   padding: 15px;    
+   padding: 15px;
 }
 
 .box3 h2 {
     border-top: 1px rgba(0, 0, 0, 0.288) groove;
     width: 100%;
-    
+
 }
 
 footer {
@@ -235,6 +232,11 @@ input[type="checkbox"]:checked ~ nav {
     transform: translateX(250px);
 }
 
+/* Menu Responsivo */
+
+
+/* ====== */
+
 .neon {
     font-size: 20px;
     font-weight: 700;
@@ -265,7 +267,7 @@ input[type="checkbox"]:checked ~ nav {
 
 @media (max-width: 900px) {
     .project-img {
-        width: 200px;        
+        width: 200px;
     }
 
     .box2 {
@@ -276,6 +278,10 @@ input[type="checkbox"]:checked ~ nav {
     .box3 {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    label {
+        display: none;
     }
 }
 
