@@ -16,8 +16,6 @@ body {
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-
-
 }
 
 .center {
@@ -46,7 +44,6 @@ body {
 
 .box h2 {
     font-size: 20px;
-
 }
 
 .box p {
@@ -68,7 +65,6 @@ body {
 .redes-sociais {
     display: flex;
     justify-content: center;
-
 }
 
 .redes-sociais li {
@@ -116,7 +112,6 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-
 }
 
 
@@ -135,7 +130,6 @@ body {
 .box3 li {
     display: grid;
     grid-template-columns: auto 1fr;
-
 }
 
 .box3 h2 {
@@ -157,7 +151,6 @@ body {
 .box3 h2 {
     border-top: 1px rgba(0, 0, 0, 0.288) groove;
     width: 100%;
-
 }
 
 footer {
@@ -176,10 +169,7 @@ footer p {
     font-size: 20px;
     padding-left: 15px;
     color: black;
-
 }
-
-
 
 nav {
     background-color: rgba(41, 41, 41, 0.856);
@@ -222,6 +212,8 @@ label {
 label img {
     width: 40px;
     border-radius: 50%;
+    outline: 5px black solid;
+    outline-offset: -4px;
 }
 
 input[type="checkbox"] {
@@ -231,11 +223,6 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked ~ nav {
     transform: translateX(250px);
 }
-
-/* Menu Responsivo */
-
-
-/* ====== */
 
 .neon {
     font-size: 20px;
