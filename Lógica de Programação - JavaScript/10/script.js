@@ -1,15 +1,15 @@
 
 for (let linha = 1; linha <= 10 ; linha++) {
-    for (let coluna = 10; coluna >= 10 - linha + 1; coluna--) {
+    for (let coluna = 10; coluna >= 10 - linha; coluna--) {
         document.write("=");
     }
 
     if (linha < 10){
-        for (i = 0; i < 1; i++){
+        for (i = 0; i <= 0; i++){
             document.write("*",);
         }
     } else {
-        for (i = 0; i < 1; i++){
+        for (i = 0; i <= 0; i++){
             document.write("",);
         }
     }
