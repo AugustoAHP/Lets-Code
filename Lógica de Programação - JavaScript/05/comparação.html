@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comparacao.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comparação</h1>
+    <hr>
+
+    <input type="number" value="2" id="n1" autofocus>
+    <!-- <input type="text" id="comparador" value=">"> -->
+    <select id="nComp">
+        <option value="MaiorQue"> > </option>
+        <option value="MenorQue"> &lt; </option>
+        <option value="MaiorIgual"> >= </option>
+        <option value="MenorIgual"> &lt;= </option>
+        <option value="Diferente"> != </option>
+        <option value="Igual"> = </option>
+    </select>
+    <input type="number" value="3" id="n2">
+    <button onclick="calc()">=</button>
+    <input type="text" value="false" id="result" disabled>
+
+    
+    <script src="comparacao.js"></script>
+
+</body>
+</html>
