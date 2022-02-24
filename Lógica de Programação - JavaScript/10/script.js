@@ -22,14 +22,14 @@ for (let linha = 1; linha <= 10 ; linha++) {
         document.write("=",);
     }
 
-    for (i = 0; i < 1; i++){
+    for (i = 0; i <= 0; i++){
         document.write("*",);
     }
 
     document.write("<br>");
 }
 
-/*
+
 
 // TESTES
 
@@ -75,4 +75,4 @@ document.write("<hr>");
     
     document.write("<br>");
 }
-*/
+
