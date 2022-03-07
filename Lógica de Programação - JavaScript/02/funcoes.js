@@ -22,6 +22,23 @@ console.log( sun() ); // 0
 console.log( sun(5) ); // 5
 console.log( sun(5, 10) ); // 15
 
+console.log("=== ARROW FUNCTION ===");
+// Arrow Function
 
+// DE: function () {}
+// PARA: () => {}
+
+// DE: function (value) {return value;}
+// PARA: value => value;
+
+let numbers = [1, 2, 3]
+
+// numbers = numbers.forEach((value) => {
+//     return value;
+// })
+
+numbers = numbers.filter(value => value < 3)
+
+console.log(numbers)
 
 

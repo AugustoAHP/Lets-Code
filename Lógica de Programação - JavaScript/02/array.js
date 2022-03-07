@@ -58,7 +58,50 @@ carros.forEach(function(carro, i) {
     document.write("- ", carro, "<br>");
 });
 
-
-
 console.log(carros);
 console.log(carros.length);
+
+document.write("<hr>");
+
+let numeros = [2, 3, 4, 32, 21, 25, 17, 1];
+console.log(numeros);
+
+console.log(
+    numeros.forEach(function(value, index) {
+        // document.write(arguments[0], "<br>");
+        console.log(value, index);
+        document.write(value, "<br>");
+    })
+);
+
+
+// filter / map / reduce
+
+// filter
+console.log(
+    numeros = numeros.filter(function(numero) {
+        console.log("filter?", numero);
+        return numero < 25;
+    })
+);
+console.log(numeros);
+
+// map
+console.log(
+    numeros = numeros.map(function(numero) {
+        console.log("map?", numero);
+        return numero * 5;
+    })
+);
+console.log(numeros);
+
+// reduce
+console.log(
+    numeros.reduce(function(previous, current, index, array) {
+        console.log("prev:", previous, "cur:", current)
+        // console.log("ind:", index, "arr:", array)
+        return previous + current
+        // previous.push(current * 2)
+        // return previous;
+    }, 0)
+);
