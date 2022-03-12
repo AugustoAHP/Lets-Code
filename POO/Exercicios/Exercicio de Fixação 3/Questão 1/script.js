@@ -11,7 +11,7 @@ class Perfil {
     avatar
     tema
 
-    constructor (nome, avatar = "https://website", tema = "light") {
+    constructor (nome, avatar, tema = "light") {
         this.nome = nome,
         this.avatar = avatar,
         this.tema = tema
