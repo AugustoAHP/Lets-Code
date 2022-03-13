@@ -61,7 +61,7 @@ class SmartWatch {
         this.passos = passos
     }
 
-    contagem (passos) {
+    contagem () {
         this.passos += 1;
         return `Contagem de passos: ${this.passos}`
     }
