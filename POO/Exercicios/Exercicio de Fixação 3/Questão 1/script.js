@@ -112,9 +112,9 @@ class Veiculo {
     mensage() {
         if(this.rodas >= 1){
             if(this.usaCombustivel === false) {
-                return `Seu veículo tem ${this.rodas} e não usa combustivel`
+                return `Seu veículo tem ${this.rodas} rodas e não usa combustivel`
             } else if(this.usaCombustivel === true) {
-                return `Seu veículo tem ${this.rodas} e usa combustivel`
+                return `Seu veículo tem ${this.rodas} rodas e usa combustivel`
             } else {
                 return `Insira um valor "True" ou "False" para "usaCombustivel"`
             }
