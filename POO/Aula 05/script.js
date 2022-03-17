@@ -97,12 +97,14 @@ class Conta{
         var umDia = (valorBoleto + valorBoleto * 0.01).toFixed(2).replace('.', ',');
         var doisDias = (valorBoleto + valorBoleto * 0.025).toFixed(2).replace('.', ',');
         var composto = valorBoleto + (valorBoleto * (1.03 * (diasAtraso * -1 / 100)));
+
         objeto = {
             nome:this.nome,
             valor:valorBoleto,
             tipo:"Pagamento Boleto",
             data:`${hoje.getDate()}/${hoje.getMonth()}/${hoje.getFullYear()}`
         }
+        
             if(diasAtraso <= -3 && composto <= this.#saldo){
                 lancamento.push(objeto)
                 this.#saldo = this.#saldo - composto;
