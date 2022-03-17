@@ -103,20 +103,22 @@ class Conta{
             tipo:"Pagamento Boleto",
             data:`${hoje.getDate()}/${hoje.getMonth()}/${hoje.getFullYear()}`
         }
-            if(diasAtraso <= -3){
+            if(diasAtraso <= -3 && composto <= this.#saldo){
                 lancamento.push(objeto)
                 this.#saldo = this.#saldo - composto;
                 return composto;
-        } else if (diasAtraso <= -2){
+        } else if (diasAtraso <= -2 && doisDias <= this.#saldo){
             this.#saldo = this.#saldo - doisDias;
             lancamento.push(objeto)
             return `R$${doisDias} reais`
-        } else if (diasAtraso <= -1){
+        } else if (diasAtraso <= -1 && umDia <= this.#saldo){
             this.#saldo = this.#saldo - umDia;
             lancamento.push(objeto)
             return `R$${umDia} reais`;
-        } else {
+        } else if (valorBoleto <= this.#saldo){
             return "Sem Juros";
+        } else {
+            return "Sem Saldo";
         }
     }
 }
