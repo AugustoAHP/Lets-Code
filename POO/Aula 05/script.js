@@ -48,6 +48,14 @@ class Conta{
     transferencia (valorDaTranferencia){
         if (valorDaTranferencia <= this.#saldo){
             this.#saldo = this.#saldo - valorDaTranferencia;
+            var data = new Date();
+            objeto = {
+                nome:this.nome,
+                valor:valorDaTranferencia,
+                tipo:"Transferencia",
+                data:`${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
+              }
+            lancamento.push(objeto)
             return `Seu saldo é ${this.#saldo} e foi transferido ${valorDaTranferencia}`
         } else {
             return ("Não é possivel transferir")
@@ -97,11 +105,14 @@ class Conta{
         }
             if(diasAtraso <= -3){
                 lancamento.push(objeto)
+                this.#saldo = this.#saldo - composto;
                 return composto;
         } else if (diasAtraso <= -2){
+            this.#saldo = this.#saldo - doisDias;
             lancamento.push(objeto)
             return `R$${doisDias} reais`
         } else if (diasAtraso <= -1){
+            this.#saldo = this.#saldo - umDia;
             lancamento.push(objeto)
             return `R$${umDia} reais`;
         } else {
@@ -158,6 +169,7 @@ const cliente = new Conta("Augusto", "Corrente", "Agencia", 4000);
 
 cliente.saque(100);
 cliente.saque(200);
+cliente.transferencia(50);
 console.log(lancamento);
 
 cliente.pagarBoleto(100, "2022/03/15");
