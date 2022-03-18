@@ -121,7 +121,6 @@ class Conta{
             } else if (valorBoleto <= this.#saldo){
                 this.#saldo = this.#saldo - valorBoleto;
                 lancamento.push(objetoBoleto);
-                return "Sem Juros";
             } else {
                 return "Sem Saldo";
             }
