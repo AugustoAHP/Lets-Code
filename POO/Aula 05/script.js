@@ -92,36 +92,39 @@ class Conta{
     pagarBoleto(valorBoleto, diaVencimento){
         var venc = new Date(diaVencimento);
         var hoje = new Date();
-        var diff = venc - hoje;
-        var diasAtraso = ((diff / 86400000) + 1).toFixed();
-        var umDia = (valorBoleto + valorBoleto * 0.01).toFixed(2).replace('.', ',');
-        var doisDias = (valorBoleto + valorBoleto * 0.025).toFixed(2).replace('.', ',');
-        var composto = valorBoleto + (valorBoleto * (1.03 * (diasAtraso * -1 / 100)));
-
-        objeto = {
+        
+        var objetoBoleto = {
             nome:this.nome,
             valor:valorBoleto,
             tipo:"Pagamento Boleto",
             data:`${hoje.getDate()}/${hoje.getMonth()}/${hoje.getFullYear()}`
         }
         
+        var diff = venc - hoje;
+        var diasAtraso = ((diff / 86400000) + 1).toFixed();
+        var umDia = (valorBoleto + valorBoleto * 0.01).toFixed(2).replace('.', ',');
+        var doisDias = (valorBoleto + valorBoleto * 0.025).toFixed(2).replace('.', ',');
+        var composto = valorBoleto + (valorBoleto * (1.03 * (diasAtraso * -1 / 100)));
+
             if(diasAtraso <= -3 && composto <= this.#saldo){
-                lancamento.push(objeto)
                 this.#saldo = this.#saldo - composto;
-                return composto;
-        } else if (diasAtraso <= -2 && doisDias <= this.#saldo){
-            this.#saldo = this.#saldo - doisDias;
-            lancamento.push(objeto)
-            return `R$${doisDias} reais`
-        } else if (diasAtraso <= -1 && umDia <= this.#saldo){
-            this.#saldo = this.#saldo - umDia;
-            lancamento.push(objeto)
-            return `R$${umDia} reais`;
-        } else if (valorBoleto <= this.#saldo){
-            return "Sem Juros";
-        } else {
-            return "Sem Saldo";
-        }
+                objeto.valor = composto;
+                lancamento.push(objetoBoleto);
+            } else if (diasAtraso <= -2 && doisDias <= this.#saldo){
+                this.#saldo = this.#saldo - doisDias;
+                objeto.valor = doisDias;
+                lancamento.push(objetoBoleto);
+            } else if (diasAtraso <= -1 && umDia <= this.#saldo){
+                this.#saldo = this.#saldo - umDia;
+                objeto.valor = umDia;
+                lancamento.push(objetoBoleto);
+            } else if (valorBoleto <= this.#saldo){
+                this.#saldo = this.#saldo - valorBoleto;
+                lancamento.push(objetoBoleto);
+                return "Sem Juros";
+            } else {
+                return "Sem Saldo";
+            }
     }
 }
 
@@ -174,10 +177,10 @@ const cliente = new Conta("Augusto", "Corrente", "Agencia", 4000);
 cliente.saque(100);
 cliente.saque(200);
 cliente.transferencia(50);
-console.log(lancamento);
-
-cliente.pagarBoleto(100, "2022/03/15");
-cliente.pagarBoleto(250, "2022/03/10");
+cliente.pagarBoleto(100, "2022/03/17");
+cliente.pagarBoleto(250, "2022/03/16");
+cliente.pagarBoleto(500, "2022/03/10");
+cliente.pagarBoleto(75, "2022/03/23");
 console.log(lancamento);
 
 
