@@ -27,7 +27,7 @@ de um determinado pgto, onde tenha as seguintes regras:
 
 let lancamento = [];
 
-let objeto = {
+var objeto = {
   nome:"",
   valor:"",
   tipo:"",
@@ -49,13 +49,13 @@ class Conta{
         if (valorDaTranferencia <= this.#saldo){
             this.#saldo = this.#saldo - valorDaTranferencia;
             var data = new Date();
-            objeto = {
+            var objetoTranf = {
                 nome:this.nome,
                 valor:valorDaTranferencia,
                 tipo:"Transferencia",
                 data:`${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
               }
-            lancamento.push(objeto)
+            lancamento.push(objetoTranf)
             return `Seu saldo é ${this.#saldo} e foi transferido ${valorDaTranferencia}`
         } else {
             return ("Não é possivel transferir")
@@ -66,7 +66,7 @@ class Conta{
         if (valorDoSaque <= this.#saldo){
             this.#saldo = this.#saldo - valorDoSaque;
             var data = new Date();
-            objeto = {
+            var objeto = {
                 nome:this.nome,
                 valor:valorDoSaque,
                 tipo:"Saque",
@@ -102,21 +102,21 @@ class Conta{
         
         var diff = venc - hoje;
         var diasAtraso = ((diff / 86400000) + 1).toFixed();
-        var umDia = (valorBoleto + valorBoleto * 0.01).toFixed(2).replace('.', ',');
-        var doisDias = (valorBoleto + valorBoleto * 0.025).toFixed(2).replace('.', ',');
-        var composto = valorBoleto + (valorBoleto * (1.03 * (diasAtraso * -1 / 100)));
+        var umDia = (valorBoleto + valorBoleto * 0.01);
+        var doisDias = (valorBoleto + valorBoleto * 0.025);
+        var composto = valorBoleto + (1.03 * (diasAtraso * -1));
 
             if(diasAtraso <= -3 && composto <= this.#saldo){
                 this.#saldo = this.#saldo - composto;
-                objeto.valor = composto;
+                objetoBoleto.valor = composto;
                 lancamento.push(objetoBoleto);
             } else if (diasAtraso <= -2 && doisDias <= this.#saldo){
                 this.#saldo = this.#saldo - doisDias;
-                objeto.valor = doisDias;
+                objetoBoleto.valor = doisDias;
                 lancamento.push(objetoBoleto);
             } else if (diasAtraso <= -1 && umDia <= this.#saldo){
                 this.#saldo = this.#saldo - umDia;
-                objeto.valor = umDia;
+                objetoBoleto.valor = umDia;
                 lancamento.push(objetoBoleto);
             } else if (valorBoleto <= this.#saldo){
                 this.#saldo = this.#saldo - valorBoleto;
