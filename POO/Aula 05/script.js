@@ -152,8 +152,8 @@ class PF extends Conta{
 
 // classe "Neto"
 class PJ extends PF{
-    #CNPJ // propriedade privada
-    // função construtora
+    #CNPJ 
+
     constructor(nome, CPF, conta, agencia, saldo, CNPJ = '', empresa = ''){
         super (nome, CPF, conta, agencia, saldo)
         this.#CNPJ = CNPJ;
@@ -176,7 +176,7 @@ const cliente = new Conta("Augusto", "Corrente", "Agencia", 4000);
 cliente.saque(100);
 cliente.saque(200);
 cliente.transferencia(50);
-cliente.pagarBoleto(100, "2022/03/17");
+cliente.pagarBoleto(1000, "2022/03/17");
 cliente.pagarBoleto(250, "2022/03/16");
 cliente.pagarBoleto(500, "2022/03/10");
 cliente.pagarBoleto(75, "2022/03/23");
