@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    padding: 15px;
+    margin: 15px;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.container p {
+    margin-top: 15px;
+}
+
+form {
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    background-color: rgb(247, 179, 96);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px black;
+}
+
+form label {
+    padding-top: 5px;
+}
+
+form button {
+    font-size: 18px;
+}
+
+.tabela {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+table, th, td {
+    border: 1px solid;
+    margin-bottom: 15px;
+}
