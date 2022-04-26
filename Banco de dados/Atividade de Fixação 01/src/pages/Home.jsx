@@ -28,6 +28,7 @@ export function Home() {
         })
         itemsArray[buscaIndex].checked = checked;
         console.log(itemsArray);
+        localStorage.setItem("itemsArray", JSON.stringify(itemsArray));
     }
     
     return (
